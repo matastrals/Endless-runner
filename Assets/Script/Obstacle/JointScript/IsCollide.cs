@@ -19,7 +19,7 @@ public class IsCollide : MonoBehaviour
     public GameObject MainPlayer;
     private void OnTriggerEnter2D(Collider2D MainPlayer)
     {
-        print("oui");
+        SceneManager.LoadScene("GameOver");
     }
 
 }
