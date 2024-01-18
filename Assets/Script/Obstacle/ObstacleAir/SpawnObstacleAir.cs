@@ -4,25 +4,23 @@ using System.Threading;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using UnityEngine.UIElements;
+using Unity.Mathematics;
 
-public class SpawnObstacle : MonoBehaviour
+public class SpawnObstacleAir : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
     public GameObject Obstacle;
     private float timer = 0;
+    private float spawnInterval = 3f;
 
     void Update()
     {
         timer = timer + Time.deltaTime;
-        if (timer >= 1.5)
+        if (timer >= spawnInterval)
         {
-            Vector2 coordinate = new Vector2(13.3f, -2.85f);
+            Vector2 coordinate = new Vector2(13f, 5f);
             Instantiate(Obstacle, coordinate, Quaternion.identity);
             timer = 0;
+            spawnInterval = UnityEngine.Random.Range(3f, 7f);
         }
     }
 }
