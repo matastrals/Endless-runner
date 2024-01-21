@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class JumpMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
-    private Vector2 jump = new Vector2(0, 6);
+    private Vector2 jump = new Vector2(0, 7.5f);
     private float ground = -3.3f;
     private bool canDoubleJump = true;
 

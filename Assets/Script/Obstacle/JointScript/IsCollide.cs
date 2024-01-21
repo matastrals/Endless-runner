@@ -5,18 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class IsCollide : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        MainPlayer = GameObject.FindWithTag("Player");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public GameObject MainPlayer;
+    private GameObject MainPlayer;
     private void OnTriggerEnter2D(Collider2D MainPlayer)
     {
         SceneManager.LoadScene("GameOver");

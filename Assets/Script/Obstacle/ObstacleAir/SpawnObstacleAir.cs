@@ -17,10 +17,10 @@ public class SpawnObstacleAir : MonoBehaviour
         timer = timer + Time.deltaTime;
         if (timer >= spawnInterval)
         {
-            Vector2 coordinate = new Vector2(13f, 5f);
+            Vector2 coordinate = new Vector2(13f, 5.5f);
             Instantiate(Obstacle, coordinate, Quaternion.identity);
             timer = 0;
-            spawnInterval = UnityEngine.Random.Range(3f, 7f);
+            spawnInterval = UnityEngine.Random.Range(6f, 15f);
         }
     }
 }

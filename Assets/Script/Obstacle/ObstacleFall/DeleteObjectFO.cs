@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeleteObject : MonoBehaviour
+public class DeleteObjectOF : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,8 +13,8 @@ public class DeleteObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 positionObstacle = transform.position;
-        if (positionObstacle.x <= -15)
+        Vector2 positionOF = transform.position;
+        if (positionOF.y <= -10)
         {
             Destroy(gameObject);
         }
